@@ -1,0 +1,53 @@
+.Sidebar {
+  width: 150px;
+  background-color: #191718;
+  .list__page {
+    .list__item {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: #ffffff;
+      padding: 14px 0 11px 16px;
+      cursor: pointer;
+      //   background-color: #5c5c5c;
+    }
+    .list__item {
+      border-bottom: 1px solid #5c5c5c;
+    }
+    .list__item + .list__item {
+      color: #aaaaaa;
+    }
+    .list__item.active {
+      color: #ffffff;
+      background-color: #5c5c5c;
+    }
+  }
+  .btn__close {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    height: 25px;
+    width: 25px;
+    background-color: #191718;
+    color: #ffffff;
+    display: none;
+  }
+}
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+  .Sidebar {
+    display: none;
+  }
+  .Sidebar.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    animation: fadeIn 0.2s;
+    .btn__close {
+      display: block;
+    }
+  }
+}

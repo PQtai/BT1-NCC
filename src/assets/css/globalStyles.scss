@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  height: 100vh;
+  box-sizing: border-box;
+  // font-size: 62.5%;
+  // line-height: 1.6rem;
+}
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button {
+  outline: none;
+  border: none;
+}
+// global styles
+
+.dFlex {
+  display: flex;
+}
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper__content {
+  margin: 0 129px;
+}
+
+.app {
+  position: relative;
+  margin: auto;
+  width: 1918px;
+  min-height: 935px;
+  max-width: 100%;
+  background-color: #fff;
+}
+/* Mobile && tablet */
+@media screen and (max-width: 64em) {
+  .main__product {
+    flex-direction: column-reverse;
+  }
+
+  .main__product-info {
+    width: 100%;
+  }
+  .main__product-desc {
+    display: none;
+  }
+}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+  .wrapper__content {
+    margin: 0 10px;
+  }
+}
+
+/* Tablet: width >= 740px and width < 1280px */
+@media only screen and (min-width: 46.25em) and (max-width: 80em) {
+  .wrapper__content {
+    margin: 0 50px;
+  }
+}
+
+// base css
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-pour-down {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
